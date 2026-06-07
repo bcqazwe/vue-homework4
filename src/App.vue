@@ -4,7 +4,7 @@ import StepOneForm from '../components/StepOneForm.vue';
 
 function handleSuccess(email: string) {
   localStorage.setItem('user_identity', email);
-  window.location.href = 'Login2.html';
+  window.location.href = new URL('Login2.html', window.location.href).href;
 }
 </script>
 

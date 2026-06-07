@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import FloatingInput from './FloatingInput.vue';
 
 const emit = defineEmits<{
@@ -8,6 +8,7 @@ const emit = defineEmits<{
 
 const email = ref('');
 const errorMessage = ref('');
+const homeHref = computed(() => new URL('./', window.location.href).href);
 
 function onSubmit() {
   const trimmedEmail = email.value.trim();
@@ -43,7 +44,7 @@ function onSubmit() {
 
     <div class="mt-2 flex items-center justify-between gap-4">
       <a
-        href="/"
+        :href="homeHref"
         class="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/8"
       >
         返回首頁
