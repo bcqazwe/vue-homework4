@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Class Demo - Login Step 1</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-fixed': '#dae2ff',
+                            'on-primary-fixed-variant': '#0040a1',
+                            'primary-container': '#0b57d0',
+                            background: '#f6faff',
+                            'surface-container': '#eaeef3',
+                            'on-surface': '#171c20',
+                            'surface-container-highest': '#dfe3e8',
+                            surface: '#f6faff',
+                            primary: '#0041a2',
+                            'on-secondary-container': '#626564',
+                            'inverse-on-surface': '#edf1f6',
+                            'on-tertiary': '#ffffff',
+                            error: '#ba1a1a',
+                            'surface-container-high': '#e4e9ed',
+                            'on-secondary-fixed': '#191c1b',
+                            'surface-dim': '#d6dadf',
+                            outline: '#737785',
+                            'on-primary': '#ffffff',
+                            'secondary-fixed': '#e1e3e1',
+                            tertiary: '#802b00',
+                            'inverse-primary': '#b2c5ff',
+                            'surface-container-low': '#f0f4f9',
+                            'on-primary-container': '#ced9ff',
+                            'secondary-container': '#e1e3e1',
+                            'inverse-surface': '#2c3135',
+                            'on-background': '#171c20',
+                            'surface-tint': '#0856cf',
+                            'error-container': '#ffdad6',
+                            'on-primary-fixed': '#001847',
+                            'on-error-container': '#93000a',
+                            'tertiary-fixed': '#ffdbce',
+                            'on-tertiary-fixed-variant': '#7f2b00',
+                            'surface-container-lowest': '#ffffff',
+                            'tertiary-fixed-dim': '#ffb599',
+                            'surface-bright': '#f6faff',
+                            'surface-variant': '#dfe3e8',
+                            'outline-variant': '#c3c6d6',
+                            'on-error': '#ffffff',
+                            'on-surface-variant': '#424654',
+                            'on-secondary-fixed-variant': '#444746',
+                            'on-tertiary-fixed': '#370e00',
+                            'secondary-fixed-dim': '#c5c7c5',
+                            'tertiary-container': '#a83b00',
+                            secondary: '#5c5f5e',
+                            'on-secondary': '#ffffff',
+                            'primary-fixed-dim': '#b2c5ff',
+                            'on-tertiary-container': '#ffcfbe',
+                        },
+                        borderRadius: {
+                            DEFAULT: '1rem',
+                            lg: '2rem',
+                            xl: '3rem',
+                            full: '9999px',
+                        },
+                        fontFamily: {
+                            headline: ['Plus Jakarta Sans'],
+                            body: ['Inter'],
+                            label: ['Inter'],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="bg-surface font-body text-on-surface min-h-screen">
+        <div id="app"></div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>

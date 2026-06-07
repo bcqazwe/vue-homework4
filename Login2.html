@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Class Demo - Login Step 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-bright": "#f6faff",
+                        "on-primary-fixed-variant": "#0040a1",
+                        "on-tertiary-fixed-variant": "#7f2b00",
+                        "surface-variant": "#dfe3e8",
+                        "on-tertiary-container": "#ffcfbe",
+                        "surface-dim": "#d6dadf",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#e1e3e1",
+                        "on-surface-variant": "#424654",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dfe3e8",
+                        "inverse-on-surface": "#edf1f6",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "inverse-primary": "#b2c5ff",
+                        "primary-container": "#0b57d0",
+                        "primary": "#0041a2",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#dae2ff",
+                        "tertiary": "#802b00",
+                        "surface": "#f6faff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#370e00",
+                        "tertiary-fixed": "#ffdbce",
+                        "secondary-fixed": "#e1e3e1",
+                        "on-secondary-fixed": "#191c1b",
+                        "surface-container-high": "#e4e9ed",
+                        "on-secondary-container": "#626564",
+                        "background": "#f6faff",
+                        "tertiary-container": "#a83b00",
+                        "secondary-fixed-dim": "#c5c7c5",
+                        "on-primary-container": "#ced9ff",
+                        "on-background": "#171c20",
+                        "secondary": "#5c5f5e",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2c3135",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0856cf",
+                        "surface-container-low": "#f0f4f9",
+                        "on-surface": "#171c20",
+                        "surface-container": "#eaeef3",
+                        "outline-variant": "#c3c6d6",
+                        "on-primary": "#ffffff",
+                        "outline": "#737785",
+                        "on-secondary-fixed-variant": "#444746",
+                        "on-primary-fixed": "#001847"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6faff;
+        }
+        .headline-font {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .shadow-editorial {
+            box-shadow: 0 24px 48px rgba(23, 28, 32, 0.05);
+        }
+        .ghost-border {
+            outline: 1px solid rgba(195, 198, 214, 0.2);
+        }
+        .floating-input:focus + label,
+        .floating-input:not(:placeholder-shown) + label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #0041a2;
+            background: white;
+            padding: 0 4px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col items-center justify-center p-4 selection:bg-primary-fixed selection:text-on-primary-fixed">
+<header class="absolute top-0 left-0 right-0 z-10 docked full-width bg-[#f6faff] dark:bg-slate-900 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center">
+<span class="text-xl font-semibold text-[#171c20] dark:text-slate-100 headline-font tracking-tight">Login UI Practice</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-[#5c5f5e] dark:text-slate-400">Step 2 / Password</span>
+</div>
+</header>
+<main class="w-full flex items-center justify-center">
+<div class="w-full max-w-[1024px] grid grid-cols-1 md:grid-cols-2 bg-surface-container-lowest rounded-lg shadow-editorial overflow-hidden">
+<div class="p-10 md:p-14 flex flex-col">
+<div class="mb-10">
+<p class="text-sm font-semibold text-primary bg-primary-fixed inline-block px-3 py-1 rounded-full">課堂作業示範</p>
+</div>
+<h1 class="text-4xl md:text-5xl headline-font font-medium text-on-surface mb-4 tracking-tight" id="user-greeting">你好</h1>
+<p class="text-secondary body-md mb-8">這是第二步密碼輸入示範流程。</p>
+<div class="mt-auto hidden md:block">
+<button class="flex items-center gap-3 px-4 py-2 rounded-full border border-outline-variant/30 hover:bg-surface-container transition-all group">
+<div class="w-6 h-6 rounded-full overflow-hidden">
+<div class="w-full h-full bg-surface-container-high"></div>
+</div>
+<span class="text-sm font-medium text-on-surface-variant" id="user-email-display">eric640928@gmail.com</span>
+</button>
+</div>
+</div>
+<div class="p-10 md:p-14 flex flex-col justify-center">
+<div class="space-y-6">
+<div class="relative mb-2">
+<input class="floating-input w-full px-4 py-4 text-base border border-outline-variant/30 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none bg-transparent" id="password" name="password" placeholder=" " required="" type="password"/>
+<label class="absolute left-4 top-4 text-secondary text-base transition-all duration-200 pointer-events-none origin-left" for="password">
+                            Enter your password
+                        </label>
+</div>
+<div class="flex items-center space-x-3">
+<div class="relative flex items-center">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all cursor-pointer" id="show-password" type="checkbox"/>
+</div>
+<label class="text-sm text-on-surface-variant cursor-pointer select-none font-medium" for="show-password">Show password</label>
+</div>
+<div class="flex items-center justify-between pt-8">
+<button class="text-primary font-semibold text-sm hover:underline tracking-wide">
+                            Forgot password?
+                        </button>
+<button class="bg-primary text-white px-8 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg active:scale-95 transition-all">
+                            Next
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 w-full flex justify-center space-x-6 pb-8 bg-transparent">
+<div class="flex flex-wrap justify-center gap-6">
+<span class="text-[0.75rem] font-normal Inter text-[#5c5f5e] dark:text-slate-400">© 2026 UI Practice Homework</span>
+<a class="text-[0.75rem] font-normal Inter text-[#5c5f5e] dark:text-slate-400 hover:text-[#171c20] dark:hover:text-slate-50 transition-colors" href="#">作業說明</a>
+<a class="text-[0.75rem] font-normal Inter text-[#5c5f5e] dark:text-slate-400 hover:text-[#171c20] dark:hover:text-slate-50 transition-colors" href="#">流程設計</a>
+<a class="text-[0.75rem] font-normal Inter text-[#5c5f5e] dark:text-slate-400 hover:text-[#171c20] dark:hover:text-slate-50 transition-colors" href="#">聯絡窗口</a>
+</div>
+</footer>
+<script>
+    (function() {
+        const warningKey = 'fake_site_notice_shown';
+        if (!sessionStorage.getItem(warningKey)) {
+            alert('【作業提醒】\n此頁面為課堂前端切版與互動作業示範，不連接任何真實登入服務。\n請勿輸入真實帳號或密碼。');
+            sessionStorage.setItem(warningKey, '1');
+        }
+    })();
+
+    (function() {
+        const rawIdentity = localStorage.getItem('user_identity') || 'User';
+        const userDisplay = rawIdentity.trim() || 'User';
+        const hiDisplay = userDisplay.split('@')[0] || 'User';
+        const greetingEl = document.getElementById('user-greeting');
+        const emailEl = document.getElementById('user-email-display');
+        
+        if (greetingEl) {
+            greetingEl.textContent = 'Hi ' + hiDisplay;
+        }
+        if (emailEl) {
+            emailEl.textContent = userDisplay;
+        }
+    })();
+</script></body></html>
